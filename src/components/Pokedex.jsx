@@ -5,7 +5,7 @@ import Pokecard from './Pokecard';
 function Pokedex({ pokemon }) {
   return (
     <div className="pokedex">
-      {pokemon.map(p => (
+      {pokemon.map((p) => (
         <Pokecard
           key={p.id}
           id={p.id}
@@ -21,10 +21,10 @@ function Pokedex({ pokemon }) {
 Pokedex.propTypes = {
   pokemon: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number,
-      name: PropTypes.string,
-      type: PropTypes.string,
-      base_experience: PropTypes.number,
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      base_experience: PropTypes.number.isRequired,
     })
   ),
 };
